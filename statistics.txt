@@ -1,0 +1,10 @@
+Stratejilerin kazanma oranları:
+HoldAt20DiePlayer=%27.4
+HoldAt25DiePlayer=%24.1
+RaceToGoalDiePlayer=%24.8
+MyDiePlayer=%23.7
+
+YORUM:
+En kötü benim oluşturduğum strateji çıktı.Çünkü sınırı diğerlerine göre daha küçük tuttum. Böylece daha az zar atılmış oldum ve 100 skoruna ulaşması daha zor oldu. 
+Üstteki değerlere göre HoldAt20DiePlayer stratejisi en çok kazanan oldu.Bunun da nedeni sınırı yüksek tuttuğum için zar attığımda 100 skoruna ulaşma süresi kısaldı. 
+Ama her çalıştırdığımda kazanma oranları değiştiğinden en iyi hangi strateji olduğunu tam olarak belirleyemiyoruz.
