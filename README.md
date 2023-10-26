@@ -1,28 +1,30 @@
-# dieGame
+### DieGame
 
 Prerequisites:
-- Primitive Data Types
-- Loops
-- Arrays
-- Classes
-- Interfaces
-  
+
+    Primitive Data Types
+    Loops
+    Arrays
+    Classes
+    Interfaces
+
 Learning Objectives:
-- Using interfaces
-- Using simulation to test alternative strategies
 
-  Bu projede, Die adlı çok oyunculu bir zar oyununu uyguladım. Oyunun temel amacı, 100 puanlık bir hedefe ilk ulaşan oyuncunun galip gelmesidir. Her oyuncu sırası geldiğinde zarları atar ve biriktirdiği puanları kontrol eder. Oyuncunun her hamlesinde iki seçenek vardır: "roll" ve "hold".
+    Using interfaces
+    Using simulation to test alternative strategies
 
-Bu proje kapsamında, farklı stratejileri test etmek için çeşitli sınıflar ve arayüzler oluşturdum. Öncelikle, DiePlayer arayüzünü uygulayarak genel bir Die oyuncusu tanımladım. Ardından, stratejileri temsil etmek üzere HoldAt20DiePlayer, HoldAt25DiePlayer ve RaceToGoalDiePlayer sınıflarını oluşturdum. Bu sınıflar, farklı kriterlere dayanarak oyuncuların zar atma veya durma kararlarını belirler.
+In this project, I implemented a multiplayer dice game called "Die." The main goal of the game is for the first player to reach a target of 100 points to win. Each player, in turn, rolls the dice and checks their accumulated points. In each turn, a player has two choices: "roll" and "hold."
 
-Ayrıca, UserDiePlayer sınıfını oluşturarak bir insan oyuncunun oynamasını sağladım. Bu sınıf, komut satırında oyuncuya hamle yapma seçenekleri sunar ve kullanıcının tercihine göre zar atmayı veya durmayı işler.
+Within this project, I created various classes and interfaces to test different strategies. Firstly, I defined a general Die player by implementing the DiePlayer interface. Then, I created classes such as HoldAt20DiePlayer, HoldAt25DiePlayer, and RaceToGoalDiePlayer to represent strategies. These classes determine whether players should roll or hold based on different criteria.
 
-Kendi stratejimi temsil etmek için MyDiePlayer sınıfını oluşturdum. Bu strateji, belirli bir puan eşiğini aşan veya hedef puana yaklaşan durumlarda oyuncunun kararını belirler.
+I also allowed a human player to participate by creating the UserDiePlayer class. This class provides options for the player to make moves from the command line and handles whether the player should roll or hold based on user preferences.
 
-DieGame sınıfı, oyunun kurallarını uygulayan sınıftır. Oyuncuları ve puanları takip etmek için özel veri üyeleri ekledim. playTurn() yöntemiyle her turu simüle ettim ve getMaxScore() yöntemiyle en yüksek puana sahip oyuncuyu buldum. Ayrıca, printScores() yöntemini kullanarak oyuncuların puanlarını ekrana yazdırdım.
+To represent my own strategy, I created the MyDiePlayer class. This strategy defines the player's decisions in cases where a specific point threshold is reached or as the target score is approached.
 
-Son olarak, PlayDie sınıfını oluşturdum ve main yöntemini kullanarak oyunu test ettim. Farklı stratejilere sahip bilgisayar oyuncuları ve UserDiePlayer sınıfını kullanarak oyunu oynamak veya istatistikleri hesaplamak için bu sınıfı kullandım.
+The DieGame class is the one that implements the rules of the game. I added specific data members to keep track of players and scores. I simulated each turn with the playTurn() method and found the player with the highest score using the getMaxScore() method. Additionally, I printed the players' scores to the screen using the printScores() method.
 
-Projeyi tamamlarken, 1000 kez oyun oynatarak istatistiksel verileri topladım. Her stratejinin kazanma yüzdesini hesapladım ve sonuçları "statistics.txt" adlı bir metin dosyasına kaydettim. Bu dosyada, her stratejinin performansını değerlendirerek en iyi stratejiyi belirledim ve diğer gözlemlerimi paylaştım.
+Finally, I created the PlayDie class and tested the game with the main method. I used this class to play the game with computer players having different strategies and the UserDiePlayer class or to calculate statistics.
 
-Yani bu projede, farklı stratejilerle oynanabilir bir oyun olan die game in nesne tabanlı bir uygulamasını oluşturarak çeşitli stratejileri test ettim ve kendi stratejimin diğer stratejilerle karşılaştırmasını yaparak oyunun dinamiklerini keşfettim
+To complete the project, I gathered statistical data by playing the game 1,000 times. I calculated the winning percentages for each strategy and saved the results in a text file named "statistics.txt." In this file, I evaluated the performance of each strategy and determined the best strategy, sharing my observations.
+
+In summary, in this project, I created an object-oriented implementation of the dice game "Die," a playable game with different strategies. I tested various strategies and explored the dynamics of the game by comparing my strategy with others.
